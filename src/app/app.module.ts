@@ -20,10 +20,11 @@ import { BooksService } from './services/books.service';
 import { Routes, RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
-  { path: 'books',canActivate: [AuthGuardService],  component: BookListComponent },
+  { path: 'books', canActivate: [AuthGuardService], component: BookListComponent },
   { path: 'books/new', canActivate: [AuthGuardService], component: BookFormComponent },
   { path: 'books/view/:id', canActivate: [AuthGuardService], component: SingleBookComponent },
   { path: '', redirectTo: 'books', pathMatch: 'full' },
