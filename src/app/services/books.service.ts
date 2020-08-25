@@ -20,8 +20,12 @@ export class BooksService {
 }
 getBooks() {
   firebase.database().ref('/books')
+
     .on('value', (data) => {
+      console.log('dataon service', data)
         this.books = data.val() ? data.val() : [];
+        console.log('this.books on service', this.books)
+     //   this.booksSubject.next(this.books);
         this.emitBooks();
       }
     );

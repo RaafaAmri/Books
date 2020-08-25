@@ -38,7 +38,7 @@ fileUploaded = false;
     const author = this.bookForm.get('author').value;
     const synopsis = this.bookForm.get('synopsis').value;
     const newBook = new Book(title, author);
-    newBook.synopsis = synopsis;
+    //newBook.synopsis = synopsis;
     if(this.fileUrl && this.fileUrl !== '') {
       newBook.photo = this.fileUrl;
     }
